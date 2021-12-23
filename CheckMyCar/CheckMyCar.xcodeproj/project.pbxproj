@@ -25,7 +25,24 @@
 		2934578B27736F1B00FC4B7F /* BrandCategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2934578A27736F1B00FC4B7F /* BrandCategoryListViewModel.swift */; };
 		2934578F2773B25800FC4B7F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2934578E2773B25800FC4B7F /* Array+Extensions.swift */; };
 		293457912773B55600FC4B7F /* Constants+AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293457902773B55600FC4B7F /* Constants+AppConstant.swift */; };
+		299F519727745873003ECC2E /* CarBrandViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F519627745873003ECC2E /* CarBrandViewModelTests.swift */; };
+		299F5199277458B5003ECC2E /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F5198277458B5003ECC2E /* WebServiceTests.swift */; };
+		299F519C27745BA5003ECC2E /* carBrandSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 299F519B27745BA5003ECC2E /* carBrandSample.json */; };
+		299F519E27746115003ECC2E /* carBrandSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 299F519B27745BA5003ECC2E /* carBrandSample.json */; };
+		299F51A2277470BC003ECC2E /* BrandCategoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F51A1277470BC003ECC2E /* BrandCategoryViewModelTests.swift */; };
+		299F51A32774725C003ECC2E /* brandCategorySample.json in Resources */ = {isa = PBXBuildFile; fileRef = 299F51A027747098003ECC2E /* brandCategorySample.json */; };
+		299F51A42774725C003ECC2E /* brandCategorySample.json in Resources */ = {isa = PBXBuildFile; fileRef = 299F51A027747098003ECC2E /* brandCategorySample.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		299F5191277456EF003ECC2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 293457482771BB9300FC4B7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2934574F2771BB9300FC4B7F;
+			remoteInfo = CheckMyCar;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		293457502771BB9300FC4B7F /* CheckMyCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckMyCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,10 +65,23 @@
 		2934578A27736F1B00FC4B7F /* BrandCategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCategoryListViewModel.swift; sourceTree = "<group>"; };
 		2934578E2773B25800FC4B7F /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		293457902773B55600FC4B7F /* Constants+AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+AppConstant.swift"; sourceTree = "<group>"; };
+		299F518D277456EF003ECC2E /* CheckMyCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckMyCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		299F519627745873003ECC2E /* CarBrandViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBrandViewModelTests.swift; sourceTree = "<group>"; };
+		299F5198277458B5003ECC2E /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
+		299F519B27745BA5003ECC2E /* carBrandSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carBrandSample.json; sourceTree = "<group>"; };
+		299F51A027747098003ECC2E /* brandCategorySample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = brandCategorySample.json; sourceTree = "<group>"; };
+		299F51A1277470BC003ECC2E /* BrandCategoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCategoryViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2934574D2771BB9300FC4B7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		299F518A277456EF003ECC2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				293457522771BB9300FC4B7F /* CheckMyCar */,
+				299F518E277456EF003ECC2E /* CheckMyCarTests */,
 				293457512771BB9300FC4B7F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				293457502771BB9300FC4B7F /* CheckMyCar.app */,
+				299F518D277456EF003ECC2E /* CheckMyCarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +231,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		299F518E277456EF003ECC2E /* CheckMyCarTests */ = {
+			isa = PBXGroup;
+			children = (
+				299F519A27745B81003ECC2E /* Car Brand View Model Test */,
+				299F519F2774704F003ECC2E /* Brand Category ViewModel Test */,
+				299F5198277458B5003ECC2E /* WebServiceTests.swift */,
+			);
+			path = CheckMyCarTests;
+			sourceTree = "<group>";
+		};
+		299F519A27745B81003ECC2E /* Car Brand View Model Test */ = {
+			isa = PBXGroup;
+			children = (
+				299F519B27745BA5003ECC2E /* carBrandSample.json */,
+				299F519627745873003ECC2E /* CarBrandViewModelTests.swift */,
+			);
+			path = "Car Brand View Model Test";
+			sourceTree = "<group>";
+		};
+		299F519F2774704F003ECC2E /* Brand Category ViewModel Test */ = {
+			isa = PBXGroup;
+			children = (
+				299F51A027747098003ECC2E /* brandCategorySample.json */,
+				299F51A1277470BC003ECC2E /* BrandCategoryViewModelTests.swift */,
+			);
+			path = "Brand Category ViewModel Test";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,6 +279,24 @@
 			productReference = 293457502771BB9300FC4B7F /* CheckMyCar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		299F518C277456EF003ECC2E /* CheckMyCarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 299F5195277456EF003ECC2E /* Build configuration list for PBXNativeTarget "CheckMyCarTests" */;
+			buildPhases = (
+				299F5189277456EF003ECC2E /* Sources */,
+				299F518A277456EF003ECC2E /* Frameworks */,
+				299F518B277456EF003ECC2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				299F5192277456EF003ECC2E /* PBXTargetDependency */,
+			);
+			name = CheckMyCarTests;
+			productName = CheckMyCarTests;
+			productReference = 299F518D277456EF003ECC2E /* CheckMyCarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,6 +309,10 @@
 				TargetAttributes = {
 					2934574F2771BB9300FC4B7F = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					299F518C277456EF003ECC2E = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 2934574F2771BB9300FC4B7F;
 					};
 				};
 			};
@@ -248,6 +330,7 @@
 			projectRoot = "";
 			targets = (
 				2934574F2771BB9300FC4B7F /* CheckMyCar */,
+				299F518C277456EF003ECC2E /* CheckMyCarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,8 +341,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				293457602771BB9400FC4B7F /* LaunchScreen.storyboard in Resources */,
+				299F51A42774725C003ECC2E /* brandCategorySample.json in Resources */,
 				2934575D2771BB9400FC4B7F /* Assets.xcassets in Resources */,
+				299F519E27746115003ECC2E /* carBrandSample.json in Resources */,
 				2934575B2771BB9300FC4B7F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		299F518B277456EF003ECC2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299F519C27745BA5003ECC2E /* carBrandSample.json in Resources */,
+				299F51A32774725C003ECC2E /* brandCategorySample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +382,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		299F5189277456EF003ECC2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299F51A2277470BC003ECC2E /* BrandCategoryViewModelTests.swift in Sources */,
+				299F5199277458B5003ECC2E /* WebServiceTests.swift in Sources */,
+				299F519727745873003ECC2E /* CarBrandViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		299F5192277456EF003ECC2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2934574F2771BB9300FC4B7F /* CheckMyCar */;
+			targetProxy = 299F5191277456EF003ECC2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		293457592771BB9300FC4B7F /* Main.storyboard */ = {
@@ -484,6 +596,52 @@
 			};
 			name = Release;
 		};
+		299F5193277456EF003ECC2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KC4WL3J36F;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nilaakash.CheckMyCarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckMyCar.app/CheckMyCar";
+			};
+			name = Debug;
+		};
+		299F5194277456EF003ECC2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KC4WL3J36F;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nilaakash.CheckMyCarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckMyCar.app/CheckMyCar";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,6 +659,15 @@
 			buildConfigurations = (
 				293457652771BB9400FC4B7F /* Debug */,
 				293457662771BB9400FC4B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		299F5195277456EF003ECC2E /* Build configuration list for PBXNativeTarget "CheckMyCarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				299F5193277456EF003ECC2E /* Debug */,
+				299F5194277456EF003ECC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

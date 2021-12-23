@@ -1,0 +1,22 @@
+{
+  "page": 0,
+  "pageSize": 15,
+  "totalPageCount": 6,
+  "wkda": {
+    "107": "Bentley",
+    "125": "Borgward",
+    "130": "BMW",
+    "141": "Buick",
+    "145": "Brilliance",
+    "150": "Cadillac",
+    "157": "Caterham",
+    "160": "Chevrolet",
+    "020": "Abarth",
+    "040": "Alfa Romeo",
+    "042": "Alpina",
+    "043": "Alpine",
+    "057": "Aston Martin",
+    "060": "Audi",
+    "095": "Barkas"
+  }
+}

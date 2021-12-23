@@ -9,10 +9,10 @@ import Combine
 import Foundation
 
 // MARK: - Brand List Service Actor
-private actor BrandListService {
+actor BrandListService {
     
     /// API Service Protocol
-    let apiService: APIServiceProtocol
+    nonisolated let apiService: APIServiceProtocol
     
     // MARK: - Initialiser
     init(apiService: APIServiceProtocol = WebService()) {
@@ -29,7 +29,7 @@ private actor BrandListService {
                 case .success(let brandCategoryList):
                     continuation.resume(returning: brandCategoryList)
                 case .failure(let error):
-                    continuation.resume(throwing: error)
+                    continuation.resume(throwing: APIError.emptyData)
                     print(error)
                 }
             }
@@ -47,7 +47,7 @@ class BrandCategoryListViewModel: ObservableObject {
     // MARK: - Variables
     private(set) var manufacturer: ManufacturerInformation
     private(set) var brandCategoryList: GenericList?
-    private let brandListService: BrandListService
+    private(set) var brandListService: BrandListService
     
     // MARK: - Initialisers
     init(manufacturer: ManufacturerInformation, apiService: APIServiceProtocol = WebService()) {
@@ -78,10 +78,12 @@ class BrandCategoryListViewModel: ObservableObject {
         self.brandCategories = localManufacturerArray.unique{ $0.id }
     }
     
-    private func mappedManufacturerInformationArray(dictionary: [String: String]) -> [ManufacturerInformation] {
+    func mappedManufacturerInformationArray(dictionary: [String: String]) -> [ManufacturerInformation] {
         var manufacturerArray: [ManufacturerInformation] = []
         dictionary.keys.forEach { key in
-            manufacturerArray.append(ManufacturerInformation(name: dictionary[key] ?? .empty, id: key))
+            if let value = dictionary[key] {
+                manufacturerArray.append(ManufacturerInformation(name: value, id: key))
+            }
         }
         return manufacturerArray
     }

@@ -29,11 +29,9 @@ class CarBrandViewModel {
     /// Intializer
     init(apiService: APIServiceProtocol = WebService()) {
         self.apiService = apiService
+        fetchCarBrandList()
     }
-}
-
-// MARK: - Extension to fetch car brand data
-extension CarBrandViewModel {
+    
     /// Method to fetch car brand data
     func fetchCarBrandList(url: URL? = NetworkLink.carBrandListURL(page: .zero, pageSize: AppConstant.pageSize).url, paginationApplied: Bool = false) {
         
@@ -71,10 +69,12 @@ extension CarBrandViewModel {
         }
     }
     
-    private func mappedManufacturerInformationArray(dictionary: [String: String]) -> [ManufacturerInformation] {
+    func mappedManufacturerInformationArray(dictionary: [String: String]) -> [ManufacturerInformation] {
         var manufacturerArray: [ManufacturerInformation] = []
         dictionary.keys.forEach { key in
-            manufacturerArray.append(ManufacturerInformation(name: dictionary[key] ?? .empty, id: key))
+            if let value = dictionary[key] {
+                manufacturerArray.append(ManufacturerInformation(name: value, id: key))
+            }
         }
         return manufacturerArray
     }

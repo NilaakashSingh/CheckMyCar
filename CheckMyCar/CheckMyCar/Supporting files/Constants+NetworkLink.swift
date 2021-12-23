@@ -8,7 +8,7 @@
 import Foundation
 
 struct NetworkLink {
-    private static let accessToken = "Access Token"
+    private static let accessToken = "Access token"
     private static let apiHost = "api-aws-eu-qa-1.xxxx-test.com"
     private static let scheme = "https"
     private static let urlPath = "/v1/car-types/"
